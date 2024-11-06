@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes,Link, useNavigate } from "react-router-dom";
 // import ProductQuote from  "./components/ProductQuote"
 import ProductQuote from  "./components/ProductQuote4"
-import RequestSampleForm from "./components/RequestSampleForm";
 
 
 const App = () => {
@@ -36,7 +35,6 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/product-quote" element={<ProductQuote />} />
-                    <Route path="/request-sample" element={<RequestSampleForm />} />
                     <Route path="/contact-us" element={<ProductQuote />} />
                 </Routes>
             </div>

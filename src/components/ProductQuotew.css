@@ -1,0 +1,65 @@
+/* src/ProductQuote.css */
+.product-quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quote-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bottle-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .perfume-bottle {
+    width: 100px;
+    height: 300px;
+    border: 5px solid #d1cfcf;
+    background-color: #f0e5e5;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Example animations based on selections */
+  .mild {
+    background-color: #e0f7fa; /* Light blue for mild scent */
+  }
+  
+  .moderate {
+    background-color: #ffe0b2; /* Light orange for moderate scent */
+  }
+  
+  .intense {
+    background-color: #ffccbc; /* Light red for intense scent */
+  }
+  
+  .travel-size {
+    height: 200px; /* Shorter for travel size */
+  }
+  
+  .standard-size {
+    height: 250px; /* Standard height */
+  }
+  
+  .full-size {
+    height: 300px; /* Full size */
+  }
+  
+  .yes {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect for pressurized */
+  }
+  
+  .no {
+    box-shadow: none; /* No shadow for non-pressurized */
+  }
+  

@@ -1,0 +1,29 @@
+/* src/ProductQuote.css */
+.product-quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quote-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .bottle-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  /* Remove fixed width and height, handled inline in JS */
+  .perfume-bottle {
+    transition: all 0.3s ease; /* Smooth transition for size and color */
+  }
+  
+  /* Additional styles can be added for specific sizes or effects */
+  
