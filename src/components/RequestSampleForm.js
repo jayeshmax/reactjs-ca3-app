@@ -5,7 +5,7 @@ const RequestSampleForm = () => {
   const location = useLocation();
   const { product, price, scentIntensity, quantityLevel, isPressurized } = location.state || {};
 
-  const [formData, setFormData] = useState({ name: '', address: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', address: '', email: '', phoneNo: '' });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,6 +35,10 @@ const RequestSampleForm = () => {
         <label>
           Name:
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
+        </label>
+        <label>
+          Phone No:
+          <input type="tel" name="phoneNo" value={formData.phoneNo} onChange={handleChange} required />
         </label>
         <label>
           Address:
