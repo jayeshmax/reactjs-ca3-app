@@ -50,11 +50,14 @@ const Home = () => {
     // Example product data
     const product = {
         id: 1,
-        name: "Chandan (Sandalwood)",
+        name: "Chandan (Sandalwood)1",
         price: 150,
+        imageUrl: './images/perfume-intense.svg'
     };
 
     return (
+        <div>
+
         <center style={{ color: 'white' }}>
         <br />
         <br />
@@ -141,6 +144,24 @@ const Home = () => {
 
         
         </center>
+
+        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid"> 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+
+        </div>
+
     );
 };
 

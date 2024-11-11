@@ -23,9 +23,20 @@ const RequestSampleForm = () => {
       .catch(error => console.error('Error:', error));
   };
 
+  console.log(product)
+
   return (
     <div>
       <h2>Request Sample for {product.name}</h2>
+
+      <div>
+        <img src={product.imageUrl}></img>
+      </div>
+
+      
+      
+      
+      
       <p>Price: Rs. {price}</p>
       <p>Scent Intensity: {scentIntensity}</p>
       <p>Quantity Level: {quantityLevel}</p>

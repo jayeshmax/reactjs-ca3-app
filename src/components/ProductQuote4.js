@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import './ProductQuote2.css';
+import './ProductQuote4.css';
 
 const ProductQuote4 = () => {
   const location = useLocation();
@@ -28,7 +28,7 @@ const ProductQuote4 = () => {
 
   const handleRequestSample = () => {
     navigate('/request-sample', {
-      state: { product, price, scentIntensity, quantityLevel, isPressurized }
+      state: { product, price, scentIntensity, quantityLevel, isPressurized}
     });
   };
 
@@ -46,6 +46,8 @@ const ProductQuote4 = () => {
     }
   };
 
+  console.log(product)
+
   return (
     <div className="product-quote-container">
         
@@ -59,9 +61,9 @@ const ProductQuote4 = () => {
               className="perfume-bottle"
               style={{
                 width: quantityLevel === "Travel Size" ? '180px' : 
-                       quantityLevel === "Standard Size" ? '200px' : '220px',
+                       quantityLevel === "Standard Size" ? '300px' : '420px',
                 height: quantityLevel === "Travel Size" ? '300px' : 
-                        quantityLevel === "Standard Size" ? '350px' : '400px'
+                        quantityLevel === "Standard Size" ? '400px' : '520px'
               }}
             />
           </div>
@@ -76,52 +78,74 @@ const ProductQuote4 = () => {
               <h4>Scent Intensity</h4>
               <button 
                 className={`btn btn-outline-primary ${scentIntensity === "Mild" ? "active" : ""}`}
-                onClick={() => handleScentChange("Mild")}>Mild (0 Rs)</button>
+                onClick={() => handleScentChange("Mild")}>Mild (₹0)</button>
               <button 
                 className={`btn btn-outline-primary ${scentIntensity === "Moderate" ? "active" : ""}`}
-                onClick={() => handleScentChange("Moderate")}>Moderate (+30 Rs)</button>
+                onClick={() => handleScentChange("Moderate")}>Moderate (+₹30)</button>
               <button 
                 className={`btn btn-outline-primary ${scentIntensity === "Intense" ? "active" : ""}`}
-                onClick={() => handleScentChange("Intense")}>Intense (+50 Rs)</button>
+                onClick={() => handleScentChange("Intense")}>Intense (+₹50)</button>
             </div>
 
             <div>
               <h4>Quantity Level</h4>
               <button 
                 className={`btn btn-outline-secondary ${quantityLevel === "Travel Size" ? "active" : ""}`}
-                onClick={() => handleQuantityChange("Travel Size")}>Travel Size (0 Rs)</button>
+                onClick={() => handleQuantityChange("Travel Size")}>Travel Size (₹0)</button>
               <button 
                 className={`btn btn-outline-secondary ${quantityLevel === "Standard Size" ? "active" : ""}`}
-                onClick={() => handleQuantityChange("Standard Size")}>Standard Size (+30 Rs)</button>
+                onClick={() => handleQuantityChange("Standard Size")}>Standard Size (+₹30)</button>
               <button 
                 className={`btn btn-outline-secondary ${quantityLevel === "Full Size" ? "active" : ""}`}
-                onClick={() => handleQuantityChange("Full Size")}>Full Size (+50 Rs)</button>
+                onClick={() => handleQuantityChange("Full Size")}>Full Size (+₹50)</button>
             </div>
 
             <div>
               <h4>Pressurized</h4>
               <button 
                 className={`btn btn-outline-success ${isPressurized === "No" ? "active" : ""}`}
-                onClick={() => handlePressurizationChange("No")}>No (0 Rs)</button>
+                onClick={() => handlePressurizationChange("No")}>No (₹0)</button>
               <button 
                 className={`btn btn-outline-success ${isPressurized === "Yes" ? "active" : ""}`}
-                onClick={() => handlePressurizationChange("Yes")}>Yes (+30 Rs)</button>
+                onClick={() => handlePressurizationChange("Yes")}>Yes (+₹30)</button>
             </div>
 
-            <h3>Total Quote Price: Rs. {price}</h3>
-
+            <h3>Total Quote Price: ₹{price}</h3>
+            
+            <h1></h1> <h1></h1> <h1></h1> <h1></h1> <h1></h1>
+            <button className="btn btn-warning btn-lg active shadow" style={{fontFamily: "cursive"}} onClick={handleRequestSample}>Request a Sample</button>
+            
             
             
 
           </div>
-      <button className="btn btn-primary" onClick={handleRequestSample}>Request a Sample</button>
+
+
+          
 
         </div>
+
 
         
       ) : (
         <p>No product data available.</p>
       )}
+
+
+      <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary fixed-bottom" data-bs-theme="dark">
+          <div class="container-fluid"> 
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
+              </li>
+              </ul>
+          </div>
+          </div>
+      </nav>
 
 
     </div>
