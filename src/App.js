@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes,Link, useNavigate } from "react-
 // import ProductQuote from  "./components/ProductQuote"
 import ProductQuote from  "./components/ProductQuote4"
 import RequestSampleForm from "./components/RequestSampleForm";
+import BrowseProduct from "./components/BrowseProduct";
 
 
 const App = () => {
@@ -10,12 +11,12 @@ const App = () => {
         <Router>
             <div>
                 <center>
-                    <img src="./assets/logo.png" style={{ height: '50px', width: 'auto', margin: '10px' }} alt="logo" />
+                    <img src="./images/fragrance-gallery-logo.png" style={{ height: '70px', width: 'auto', marginBottom:'5px' }} alt="logo" />
                 </center>
 
                 <nav className="navbar navbar-expand-sm bg-danger navbar-dark sticky-top" data-bs-theme="dark">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href="#">HomelyStay</a>
+                            <a className="navbar-brand" href="#">FragranceGallery</a>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
@@ -25,7 +26,7 @@ const App = () => {
                                 <a className="nav-link active" aria-current="page" href="#" >Home</a>
                                 </li>
                                 <li className="nav-item">
-                                <Link className="nav-link" to="contact-us">Contact Us</Link>
+                                <Link className="nav-link active" to="/browse-product">Browse Product</Link>
                                 </li>
                             </ul>
                             </div>
@@ -38,6 +39,7 @@ const App = () => {
                     <Route path="/product-quote" element={<ProductQuote />} />
                     <Route path="/request-sample" element={<RequestSampleForm />} />
                     <Route path="/contact-us" element={<ProductQuote />} />
+                    <Route path="/browse-product" element={<BrowseProduct />} />
                 </Routes>
             </div>
         </Router>
@@ -58,36 +60,50 @@ const Home = () => {
     return (
         <div>
 
-        <center style={{ color: 'white' }}>
+        <center style={{ color: 'white',backgroundImage: 'url(./images/main-page-background.jpg)', backgroundSize: 'cover', backgroundPosition: 'center left' }}>
         <br />
         <br />
         <br />
-        <p className="h1">Welcome to HomelyStay</p>
+        <p className="h1">Welcome to FragranceGallery</p>
 
 
         <br />
         <br />
-        <p className="h1">Find unique places to stay and things to do, all over the world.</p>
+        <p className="h1">Elevate Your Presence with a Fragrance that Defines You.</p>
 
         <div className="d-inline-flex p-2">
             <form action="http://127.0.0.1:5500/login.html">
-            <input type="submit" className="btn btn-primary btn-lg shadow-lg" value="Login" style={{ margin: '20px' }} />
+                <Link className="nav-link active" to="/browse-product">
+                    <input type="submit" className="btn btn-primary btn-lg shadow-lg" value="Browse Product" style={{ margin: '20px' }} />
+                </Link>
             </form>
 
             <form action="http://127.0.0.1:5500/signup/signup.html">
-            <input type="submit" className="btn btn-success btn-lg shadow-lg" value="Signup" style={{ margin: '20px' }} />
+                <Link className="nav-link active" to="/browse-product">
+
+                    <input type="submit" className="btn btn-success btn-lg shadow-lg" value="Contact us" style={{ margin: '20px' }} />
+                </Link>
+
             </form>
         </div>
 
-        <p className="h2" style={{ textShadow: '2px 2px #5c5858' }}>Available Countries</p>
+        <p className="h2" style={{ textShadow: '2px 2px #5c5858', marginTop:'30px' }}>Most popular choices</p>
 
         <div className="d-inline-flex p2">
 
             <div className="shadow-lg p-3 card mb-3 text-start rounded-4" style={{ width: '18rem', margin: '20px' }}>
             <img className="rounded-4 card-img-top" src="./assets/india.jpg" alt="India" style={{ height: '200px', width: '200px' }} />
             <div className="card-body">
-                <h5 className="card-title">India</h5>
-                <p className="card-text">A vibrant land steeped in history, is famous for its festivals, delicious curries, and the majestic Monuments</p>
+                <h5 className="card-title">Chandan (Sandalwood)1</h5>
+                <p className="card-text">Starting at ₹150/piece</p>
+
+                <button 
+                    className="p-2 ms-auto btn btn-success float-end" 
+                    onClick={() => navigate("/product-quote", { state: { product } })}
+                >
+                    Get a Quote
+                </button>
+
             </div>
             </div>
 
@@ -128,6 +144,8 @@ const Home = () => {
                                 </button>
                             </div>
                         </div>
+
+
 
 
                     </div>

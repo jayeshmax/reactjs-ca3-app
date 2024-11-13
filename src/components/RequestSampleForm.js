@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const RequestSampleForm = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { product, price, scentIntensity, quantityLevel, isPressurized } = location.state || {};
 
   const [formData, setFormData] = useState({ name: '', address: '', email: '', phoneNo: '' });
@@ -17,7 +18,10 @@ const RequestSampleForm = () => {
     e.preventDefault();
 
     console.log(formData)
-    alert("Sample requested successfully!")
+
+    alert("Your Request has been submitted\nWe will contact you shortly.");
+
+    navigate('/browse-product');
 
     
     // Submit data to backend API
@@ -35,13 +39,7 @@ const RequestSampleForm = () => {
       <h2 className='h2'>Request Sample for {product?.name}</h2>
 
       <div style={styles.formContainer}>
-        {/* <div style={styles.productDetails}>
-          <img src={product?.imageUrl} alt={product?.name} style={styles.image} />
-          <p className='h4'>Price: ₹{price}</p>
-          <p className='h4'>Scent Intensity: {scentIntensity}</p>
-          <p className='h4'>Quantity Level: {quantityLevel}</p>
-          <p className='h4'>Pressurized: {isPressurized ? 'Yes' : 'No'}</p>
-        </div> */}
+        
 
         
 
@@ -110,6 +108,10 @@ const RequestSampleForm = () => {
           </form>
         </div>
       </div>
+
+
+      
+
       <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary fixed-bottom" data-bs-theme="dark">
           <div class="container-fluid"> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -186,7 +188,10 @@ const styles = {
     cursor: 'pointer',
     width: '300px',
     marginTop: '10px',
-  }
+  },
+
+   
+  
 };
 
 export default RequestSampleForm;
