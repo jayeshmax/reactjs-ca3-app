@@ -5,7 +5,9 @@ import './ProductQuote4.css';
 const ProductQuote4 = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { product } = location.state || {};
+  const product  = location.state || {};
+
+  console.log(product)
 
   const [price, setPrice] = useState(product ? product.price : 0);
   const [scentIntensity, setScentIntensity] = useState("Mild");
@@ -46,13 +48,13 @@ const ProductQuote4 = () => {
     }
   };
 
-  console.log(product)
 
   return (
+    <div>
     <div className="product-quote-container">
         
         <h1>Product Quote</h1>
-      {product ? (
+      {location.state ? (
         <div className="quote-content">
           <div className="bottle-container">
             <img
@@ -68,7 +70,7 @@ const ProductQuote4 = () => {
             />
           </div>
           <div className="quote-details">
-            <h2>{product.name}</h2>
+            <h2>{location.state.name}</h2>
             <p>Base Price: Rs. {product.price}</p>
             <p>Product ID: {product.id}</p>
 
@@ -132,21 +134,22 @@ const ProductQuote4 = () => {
       )}
 
 
-      <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary fixed-bottom" data-bs-theme="dark">
-          <div class="container-fluid"> 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
-              </li>
-              </ul>
-          </div>
-          </div>
-      </nav>
 
+
+    </div>
+
+    
+        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" style={{marginTop: '50px'}} data-bs-theme="dark">
+            <div class="container-fluid"> 
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
     </div>
   );

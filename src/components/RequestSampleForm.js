@@ -18,6 +18,8 @@ const RequestSampleForm = () => {
     e.preventDefault();
 
     console.log(formData)
+    console.log("product asked for"  + " " + price + " " + scentIntensity + " " + quantityLevel + " " + isPressurized)
+    console.log(product)
 
     alert("Your Request has been submitted\nWe will contact you shortly.");
 

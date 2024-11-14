@@ -23,10 +23,13 @@ const App = () => {
                             <div className="collapse navbar-collapse" id="navbarText">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#" >Home</a>
+                                    <a className="nav-link active" aria-current="page" href="#" >Home</a>
+                                </li>
+                                <li>
+                                    <a className="nav-link active" aria-current="page" href="#" >|</a>
                                 </li>
                                 <li className="nav-item">
-                                <Link className="nav-link active" to="/browse-product">Browse Product</Link>
+                                    <Link className="nav-link active" to="/browse-product">Browse Product</Link>
                                 </li>
                             </ul>
                             </div>
@@ -99,7 +102,7 @@ const Home = () => {
 
                 <button 
                     className="p-2 ms-auto btn btn-success float-end" 
-                    onClick={() => navigate("/product-quote", { state: { product } })}
+                    onClick={() => navigate("/product-quote", { state:  product  })}
                 >
                     Get a Quote
                 </button>
@@ -138,7 +141,7 @@ const Home = () => {
                                 <h5 className="card-text">Starting at ₹{product.price}/piece</h5>
                                 <button 
                                     className="p-2 ms-auto btn btn-success float-end" 
-                                    onClick={() => navigate("/product-quote", { state: { product } })}
+                                    onClick={() => navigate("/product-quote", { state:  product  })}
                                 >
                                     Get a Quote
                                 </button>
@@ -165,16 +168,13 @@ const Home = () => {
 
         <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
             <div class="container-fluid"> 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
-                </li>
-                </ul>
-            </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true">FragranceGallery &copy;  2024 - 2034</a>
+                    </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
