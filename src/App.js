@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes,Link, useNavigate } from "react-router-dom";
-// import ProductQuote from  "./components/ProductQuote"
 import ProductQuote from  "./components/ProductQuote4"
 import RequestSampleForm from "./components/RequestSampleForm";
 import BrowseProduct from "./components/BrowseProduct";
+import ContactUs from "./components/ContactUs";
 
 
 const App = () => {
@@ -26,10 +26,16 @@ const App = () => {
                                     <Link className="nav-link active" to="/" >Home</Link>
                                 </li>
                                 <li>
-                                    <a className="nav-link active" aria-current="page" href="#" >|</a>
+                                    <a className="nav-link active" aria-current="page" >|</a>
                                 </li>
                                 <li className="nav-item">
                                     <Link className="nav-link active" to="/browse-product">Browse Product</Link>
+                                </li>
+                                <li>
+                                    <a className="nav-link active" aria-current="page" >|</a>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link active" to="/contact-us">Contact Us</Link>
                                 </li>
                             </ul>
                             </div>
@@ -41,7 +47,7 @@ const App = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/product-quote" element={<ProductQuote />} />
                     <Route path="/request-sample" element={<RequestSampleForm />} />
-                    <Route path="/contact-us" element={<ProductQuote />} />
+                    <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="/browse-product" element={<BrowseProduct />} />
                 </Routes>
             </div>
