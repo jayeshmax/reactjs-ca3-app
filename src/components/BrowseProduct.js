@@ -7,7 +7,6 @@ function BrowseProduct() {
 
 
     
-    // Example product data
     const product1 = {
         id: 1,
         name: "Chandan (Sandalwood)",
