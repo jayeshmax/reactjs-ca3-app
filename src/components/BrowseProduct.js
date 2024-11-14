@@ -12,7 +12,7 @@ function BrowseProduct() {
         name: "Chandan (Sandalwood)",
         price: 180,
         imageUrl: './images/product-images/1.png',
-        description: 'Sandalwood is a quintessential Indian fragrance, known for its warm, creamy, and soothing scent. Many Indian perfume brands offer Chandan as a signature fragrance.'
+        description: 'Our Chandan (Sandalwood) perfume captures the timeless essence of tranquility, offering a rich, soothing fragrance that lingers gently. With its deep, earthy notes.'
     };
 
 
@@ -21,7 +21,7 @@ function BrowseProduct() {
         name: "Mogra (Jasmine)",
         price: 170,
         imageUrl: './images/product-images/2.png',
-        description: 'Mogra is a fragrant jasmine flower, widely used in Indian perfumes for its sweet, floral, and intoxicating scent.'
+        description: 'Our Mogra (Jasmine) perfume envelops you in the exquisite fragrance of fresh jasmine blossoms, offering a sweet, floral scent that’s both uplifting and elegant.'
     };
 
 
@@ -56,7 +56,7 @@ function BrowseProduct() {
         name: "Kesar (Saffron)",
         price: 250,
         imageUrl: './images/product-images/6.png',
-        description: 'Kesar or saffron is a highly aromatic spice in India, and perfumes made with saffron notes are warm, sweet, and exotic.'
+        description: 'Our Kesar (Saffron) perfume is a luxurious, warm fragrance that blends the rich, exotic notes of saffron with subtle hints of spice and sweetness. This opulent scent exudes sophistication.'
     };
 
     const product7 = {
@@ -110,7 +110,7 @@ function BrowseProduct() {
                             <div className="card-body clearfix">
                                 <h4 className="card-title">{product2.name}</h4>
                                 <h5 className="card-text">Starting at ₹{product2.price}/piece</h5>
-                                <p class="card-text">{product1.description}</p>
+                                <p class="card-text">{product2.description}</p>
 
                                 <button 
                                     className="p-2 ms-auto btn btn-success float-end" 

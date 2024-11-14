@@ -112,7 +112,10 @@ const ProductQuote4 = () => {
                 onClick={() => handlePressurizationChange("Yes")}>Yes (+₹30)</button>
             </div>
 
-            <h3>Total Quote Price: ₹{price}</h3>
+            <h4 style={{marginTop:'20px'}}>Minimum order Quantity(MOQ): 20 piece</h4>
+            <h3>Total Quote Price: ₹{price}/piece</h3>
+
+
             
             <h1></h1> <h1></h1> <h1></h1> <h1></h1> <h1></h1>
             <button className="btn btn-warning btn-lg active shadow" style={{fontFamily: "cursive"}} onClick={handleRequestSample}>Request a Sample</button>

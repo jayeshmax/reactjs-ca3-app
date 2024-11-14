@@ -39,6 +39,7 @@ const ContactUs = () => {
 
           <label style={styles.label}>
             Name:
+            <br/>
             <input 
               type="text" 
               name="name" 
@@ -52,6 +53,7 @@ const ContactUs = () => {
 
           <label style={styles.label}>
             Phone No:
+            <br/>
             <input 
               type="tel" 
               name="phoneNo" 
@@ -65,6 +67,7 @@ const ContactUs = () => {
 
           <label style={styles.label}>
             E-mail:
+            <br/>
             <input 
               type="email" 
               name="email" 
@@ -78,6 +81,7 @@ const ContactUs = () => {
 
           <label style={styles.label}>
             Address:
+            <br/>
             <textarea 
               rows="5" 
               cols="40" 
@@ -129,16 +133,17 @@ const styles = {
   input: {
     marginBottom: '10px',
     padding: '8px',
-    width: '100%', // Make input fields take full width of the container
+    width: '300px', // Make input fields take full width of the container
     border: '1px solid #ccc',
     borderRadius: '4px',
+
     fontSize: '14px',
   },
 
   textarea: {
     marginBottom: '10px',
     padding: '8px',
-    width: '100%',
+    width: '300px',
     border: '1px solid #ccc',
     borderRadius: '4px',
     fontSize: '14px',
@@ -151,7 +156,7 @@ const styles = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    width: '100%',  // Make button take full width of the container
+    width: '300px',  // Make button take full width of the container
     marginTop: '10px',
   },
 };

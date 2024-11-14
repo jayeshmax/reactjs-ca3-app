@@ -16,7 +16,7 @@ const App = () => {
 
                 <nav className="navbar navbar-expand-sm bg-danger navbar-dark sticky-top" data-bs-theme="dark">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href="#">FragranceGallery</a>
+                            <Link className="navbar-brand" to='/'>FragranceGallery</Link>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
@@ -64,7 +64,7 @@ const Home = () => {
         name: "Chandan (Sandalwood)",
         price: 180,
         imageUrl: './images/product-images/1.png',
-        description: 'Sandalwood is a quintessential Indian fragrance, known for its warm, creamy, and soothing scent. Many Indian perfume brands offer Chandan as a signature fragrance.'
+        description: 'Our Chandan (Sandalwood) perfume captures the timeless essence of tranquility, offering a rich, soothing fragrance that lingers gently. With its deep, earthy notes.'
     };
 
 
@@ -73,7 +73,7 @@ const Home = () => {
         name: "Mogra (Jasmine)",
         price: 170,
         imageUrl: './images/product-images/2.png',
-        description: 'Mogra is a fragrant jasmine flower, widely used in Indian perfumes for its sweet, floral, and intoxicating scent.'
+        description: 'Our Mogra (Jasmine) perfume envelops you in the exquisite fragrance of fresh jasmine blossoms, offering a sweet, floral scent that’s both uplifting and elegant.'
     };
 
 
@@ -108,7 +108,7 @@ const Home = () => {
         name: "Kesar (Saffron)",
         price: 250,
         imageUrl: './images/product-images/6.png',
-        description: 'Kesar or saffron is a highly aromatic spice in India, and perfumes made with saffron notes are warm, sweet, and exotic.'
+        description: 'Our Kesar (Saffron) perfume is a luxurious, warm fragrance that blends the rich, exotic notes of saffron with subtle hints of spice and sweetness. This opulent scent exudes sophistication and sensuality, creating an aura of indulgence.'
     };
 
     const product7 = {
@@ -149,7 +149,7 @@ const Home = () => {
             </form>
 
             <form>
-                <Link className="nav-link active" to="/browse-product">
+                <Link className="nav-link active" to="/contact-us">
                     <input type="submit" className="btn btn-success btn-lg shadow-lg" value="Contact us" style={{ margin: '20px' }} />
                 </Link>
 
